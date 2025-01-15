@@ -5,7 +5,7 @@ sidebar_position: 3
 # TrajectoryBuilder Functions
 
 This page lists common Roadrunner TrajectoryBuilder functions along with a description and demonstration of them. All of the functions listed below should be put inside a trajectoryBuilder which could then be created into an action and run.
-```jsx
+```java
 Pose2d beginPose = new Pose2d(-16, -55, Math.toRadians(90));
 MecanumDrive drive = new MecanumDrive(hardwareMap, beginPose);
 
@@ -33,7 +33,7 @@ The video demonstrations of the commands shown below are shown from the point of
   ##### setTangent(Double r)
 </details>
 
-```jsx
+```java
 // sets the tangent to 90° (Pi radians)
 .setTangent(Math.PI)
 ```
@@ -44,7 +44,7 @@ The video demonstrations of the commands shown below are shown from the point of
   ##### setReversed(Boolean reversed)
 </details>
 
-```jsx
+```java
 // run trajectory with robot facing opposite direction (backwards)
 .setReversed(true)
 ```
@@ -64,7 +64,7 @@ The video demonstrations of the commands shown below are shown from the point of
   ##### lineToX(Double posX)
 </details>
 
-```jsx
+```java
 // drive to an x-value of 25
 .lineToX(25)
 ```
@@ -78,7 +78,7 @@ The video demonstrations of the commands shown below are shown from the point of
   ##### lineToXConstantHeading(Double posX)
 </details>
 
-```jsx
+```java
 // drive to an x-value of 25
 .lineToXConstantHeading(25)
 ```
@@ -94,7 +94,7 @@ The video demonstrations of the commands shown below are shown from the point of
   ##### lineToXLinearHeading(Double posX, Double heading)
 </details>
 
-```jsx
+```java
 // drive to an x-value of 25
 .lineToXConstantHeading(25)
 ```
