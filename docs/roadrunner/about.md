@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # What is Roadrunner?
 
-Roadrunner is an FTC library.
+Roadrunner is an FTC library for planning robot paths.
 
 These docs only cover version 1.0+ of the Roadrunner Library. If you are using an older version (0.5) of Roadrunner, please see [learnroadrunner.com](https://learnroadrunner.com/).
 
@@ -20,7 +20,7 @@ For installation instructions, see: [https://rr.brott.dev/docs/v1-0/installation
 # Sample Program
 The following is a simple Roadrunner program showcasing some basic features.
 
-```jsx
+```java
 // Specify a starting pose
 Pose2d beginPose = new Pose2d(-16, -55, Math.toRadians(90));
 
