@@ -4,6 +4,6 @@ sidebar_position: 2
 
 # Important Terms to Know
 
-```jsx
+```java
 pose2d()
 ```
