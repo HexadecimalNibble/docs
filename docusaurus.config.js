@@ -46,7 +46,7 @@ const config = {
           sidebarPath: './sidebars.js',
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/HexadecimalNibble/docs/tree/main/docs/',
+            'https://github.com/HexadecimalNibble/docs/tree/main/',
         },
         blog: false,
         theme: {
