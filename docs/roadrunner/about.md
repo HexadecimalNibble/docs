@@ -12,7 +12,7 @@ These docs only cover version 1.0+ of the Roadrunner Library. If you are using a
 ## Coordinate Frame
 Roadrunner operates on an alliance-centric coordinate frame with coordinate (0, 0) being the center of the field and coordinate (-72, -72) being the bottom left corner from the point of view of the alliance.
 
-Roadrunner's coordinates coorespond to inches. For example, the coordiante (20, 30) would be located here:
+Roadrunner's coordinates coorespond to inches. For example, the coordinate (20, 30) would be located here:
 
 # Installation
 For installation instructions, see: [https://rr.brott.dev/docs/v1-0/installation/](https://rr.brott.dev/docs/v1-0/installation/).
