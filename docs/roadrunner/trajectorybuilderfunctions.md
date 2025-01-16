@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 # TrajectoryBuilder Functions
@@ -98,6 +98,10 @@ The video demonstrations of the commands shown below are shown from the point of
 // drive to an x-value of 25
 .lineToXConstantHeading(25)
 ```
+
+:::tip Notice
+The behavior of all of the above lineTo functions are the same when the heading does not change.
+:::
 
 ### waitSeconds()
 

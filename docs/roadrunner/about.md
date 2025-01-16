@@ -14,11 +14,11 @@ Roadrunner operates on an alliance-centric coordinate frame with coordinate (0, 
 
 Roadrunner's coordinates coorespond to inches. For example, the coordinate (20, 30) would be located here:
 
-# Installation
-For installation instructions, see: [https://rr.brott.dev/docs/v1-0/installation/](https://rr.brott.dev/docs/v1-0/installation/).
+## Installation
+For installation instructions, please see: [https://rr.brott.dev/docs/v1-0/installation/](https://rr.brott.dev/docs/v1-0/installation/).
 
-# Sample Program
-The following is a simple Roadrunner program showcasing some basic features.
+## Sample Program
+The following is a simple program showcasing some basic features of Roadrunner.
 
 ```java
 // Specify a starting pose
@@ -35,7 +35,7 @@ Action trajAction;
 traj = drive.actionBuilder(drive.pose)
   // Put your functions here
   .strafeTo(new Vector2d(30, 10))
-  .strafeTo(new Vector2d(-30, -10));
+  .splineTo(new Vector2d(-30, -10));
 
 // Create an action that follows the created trajectory
 trajAction = traj.build()
