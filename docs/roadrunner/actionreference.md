@@ -4,48 +4,59 @@ sidebar_position: 5
 
 # Action Reference
 
-This page lists common Roadrunner Actions along with a description and demonstration of them. All of the functions listed below should be put inside a trajectoryBuilder which could then be created into an action and run.
-```java
-PUT JAVA CODE HERE
-```
-:::warning Be careful
-The video demonstrations of the commands shown below are shown from the point of view of the audience which means the x-value will go up.
-:::
+This page lists common Roadrunner Actions along with a description and demonstration of them. Please see the official Roadrunner [docs](https://rr.brott.dev/docs/v1-0/actions/) page on actions for more information on implementing the actions in your program.
 
-## SequentialAction
+## Built-in Actions
+
+### SequentialAction
 <details>
   <summary><strong>Parameters</strong></summary>
   ##### SequentialAction(Action actions)
   ##### SequentialAction(List\<Action\> initialActions)
 </details>
 
+Executes actions one after another (sequentially).
+
 ```java
-CODE HERE
+Action awesomeAction = new SequentialAction(
+  coolActionHere,
+  otherCoolAction
+);
 ```
 
-## ParallelAction
+### ParallelAction
 <details>
   <summary><strong>Parameters</strong></summary>
   ##### ParallelAction(Action actions)
   ##### ParallelAction(List\<Action\> initialActions)
 </details>
 
+Executes multiple actions at the same time. Action terminates when <strong>all</strong> actions finish.
+
 ```java
-CODE HERE
+Action awesomeAction = new ParallelAction(
+  actionOne,
+  actionExecutedAtSameTime
+);
 ```
 
-## RaceAction
+### RaceAction
 <details>
   <summary><strong>Parameters</strong></summary>
   ##### RaceActionAction(Action actions)
   ##### RaceActionAction(List\<Action\> initialActions)
 </details>
 
+Executes multiple actions at the same time. Action terminates as soon as <strong>one</strong> action finishes.
+
 ```java
-CODE HERE
+Action awesomeAction = new RaceAction(
+  reallySlowAction,
+  reallyQuickAction // The RaceAction will finish whenever the first action returns.
+);
 ```
 
-## SleepAction
+### SleepAction
 <details>
   <summary><strong>Parameters</strong></summary>
   ##### SleepAction(Action actions)
@@ -56,19 +67,31 @@ CODE HERE
 CODE HERE
 ```
 
-## InstantAction
+### InstantAction
 <details>
   <summary><strong>Parameters</strong></summary>
   ##### InstantAction(InstantFunction f)
 </details>
 
-```java
-CODE HERE
-```
-
-## NullAction
-Does nothing.
+Action that instantly runs. This is useful for servo movements because we don't know when the servo gets to its target position (this could be used in a SequentialAction with a delay).
 
 ```java
-CODE HERE
+// Action immedietly returns
+Action awesomeAction = new InstantAction(
+  coolAction,
+  reallyCoolAction
+);
 ```
+
+### NullAction
+Does nothing. This action is probably not useful for anything and is only included for completeness sake.
+
+```java
+Action boringAction = new NullAction()
+```
+
+## Custom Actions
+
+See [https://rr.brott.dev/docs/v1-0/actions/#custom-actions](https://rr.brott.dev/docs/v1-0/actions/#custom-actions).
+
+TODO: MAKE THIS SECTION
