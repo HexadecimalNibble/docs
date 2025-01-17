@@ -1,0 +1,311 @@
+---
+sidebar_position: 6
+---
+
+# TrajectoryBuilder Reference
+
+This page lists common Roadrunner TrajectoryBuilder functions along with a description and demonstration of them. All of the functions listed below should be put inside a trajectoryBuilder which could then be created into an action and run.
+```java
+Pose2d beginPose = new Pose2d(-16, -55, Math.toRadians(90));
+MecanumDrive drive = new MecanumDrive(hardwareMap, beginPose);
+
+TrajectoryActionBuilder traj;
+Action trajAction;
+
+traj = drive.actionBuilder(drive.pose)
+  // Put your functions here
+  .strafeTo(new Vector2d(30, 10))
+  .strafeTo(new Vector2d(-30, -10));
+
+trajAction = traj.build()
+
+// Run trajectory
+Actions.runBlocking(trajAction);
+```
+:::warning Be careful
+The video demonstrations of the commands shown below are shown from the point of view of the audience which means the x-value will go up.
+:::
+
+## setTangent()
+<details>
+  <summary><strong>Parameters</strong></summary>
+  ##### setTangent(Rotation2d r)
+  ##### setTangent(Double r)
+</details>
+
+```java
+// sets the tangent to 90° (Pi radians)
+.setTangent(Math.PI)
+```
+
+## setReversed()
+<details>
+  <summary><strong>Parameters</strong></summary>
+  ##### setReversed(Boolean reversed)
+</details>
+
+```java
+// run trajectory with robot facing opposite direction (backwards)
+.setReversed(true)
+```
+
+<br></br>
+<br></br>
+
+:::warning Be careful
+`lineToX()` and `lineToY()` do not allow strafing. Therefore, these functions should be avoided in favor of `strafeTo()`.
+:::
+
+:::tip Notice
+  The behavior of all of the below lineTo functions are the same when the heading does not change.
+:::
+## lineTo commands
+<details>
+  <summary><strong>lineToX(),	lineToXConstantHeading(),	lineToXLinearHeading(), lineToXSplineHeading()<br></br>lineToY(),	lineToYConstantHeading(),	lineToYLinearHeading(), lineToYSplineHeading()</strong></summary>
+
+  ### lineToX()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### lineToX(Double posX, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)
+    ##### lineToX(Double posX, VelConstraint velConstraintOverride)
+    ##### lineToX(Double posX)
+  </details>
+
+  ```java
+  // drive to an x-value of 25
+  .lineToX(25)
+  ```
+  <video controls src="https://rr-playground-server.brott.dev/3ee477b3-aa4b-4be3-a43b-778964ad8023.mp4" title="Title" height="400px"></video>
+
+  ### lineToXConstantHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### lineToXConstantHeading(Double posX, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    ##### lineToXConstantHeading(Double posX, VelConstraint velConstraintOverride)	
+    ##### lineToXConstantHeading(Double posX)
+  </details>
+
+  ```java
+  // drive to an x-value of 25
+  .lineToXConstantHeading(25)
+  ```
+
+  ### lineToXLinearHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### lineToXLinearHeading(Double posX, Rotation2d heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	lineToXLinearHeading(Double posX, Rotation2d heading, VelConstraint velConstraintOverride)	
+    #####	lineToXLinearHeading(Double posX, Rotation2d heading)	
+    #####	lineToXLinearHeading(Double posX, Double heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	lineToXLinearHeading(Double posX, Double heading, VelConstraint velConstraintOverride)	
+    #####	lineToXLinearHeading(Double posX, Double heading)
+  </details>
+
+  ```java
+  // drive to an x-value of 25
+  .lineToXLinearHeading(25)
+  ```
+
+  ### lineToXSplineHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### lineToXSplineHeading(Double posX, Rotation2d heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	lineToXSplineHeading(Double posX, Rotation2d heading, VelConstraint velConstraintOverride)	
+    #####	lineToXSplineHeading(Double posX, Rotation2d heading)	
+    #####	lineToXSplineHeading(Double posX, Double heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	lineToXSplineHeading(Double posX, Double heading, VelConstraint velConstraintOverride)	
+    #####	lineToXSplineHeading(Double posX, Double heading)
+  </details>
+
+  ```java
+  // drive to an y-value of 25
+  .lineToXSplineHeading(25)
+  ```
+
+  ### lineToY()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### lineToY(Double posY, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)
+    ##### lineToY(Double posY, VelConstraint velConstraintOverride)
+    ##### lineToY(Double posY)
+  </details>
+
+  ```java
+  // drive to an y-value of 25
+  .lineToY(25)
+  ```
+
+  ### lineToYConstantHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### lineToYConstantHeading(Double posY, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    ##### lineToYConstantHeading(Double posY, VelConstraint velConstraintOverride)	
+    ##### lineToYConstantHeading(Double posY)
+  </details>
+
+  ```java
+  // drive to an y-value of 25
+  .lineToYConstantHeading(25)
+  ```
+
+  ### lineToYLinearHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### lineToYLinearHeading(Double posY, Rotation2d heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	lineToYLinearHeading(Double posY, Rotation2d heading, VelConstraint velConstraintOverride)	
+    #####	lineToYLinearHeading(Double posY, Rotation2d heading)	
+    #####	lineToYLinearHeading(Double posY, Double heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	lineToYLinearHeading(Double posY, Double heading, VelConstraint velConstraintOverride)	
+    #####	lineToYLinearHeading(Double posY, Double heading)
+  </details>
+
+  ```java
+  // drive to an y-value of 25
+  .lineToYLinearHeading(25)
+  ```
+
+  ### lineToYSplineHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### lineToYSplineHeading(Double posY, Rotation2d heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	lineToYSplineHeading(Double posY, Rotation2d heading, VelConstraint velConstraintOverride)	
+    #####	lineToYSplineHeading(Double posY, Rotation2d heading)	
+    #####	lineToYSplineHeading(Double posY, Double heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	lineToYSplineHeading(Double posY, Double heading, VelConstraint velConstraintOverride)	
+    #####	lineToYSplineHeading(Double posY, Double heading)
+  </details>
+
+  ```java
+  // drive to an y-value of 25
+  .lineToYSplineHeading(25)
+  ```
+</details>
+
+## strafeTo commands
+<details>
+  <summary><strong>PUT FUNCTIONS HERE</strong></summary>
+
+  ### strafeTo()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### strafeTo(Vector2d pos, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	strafeTo(Vector2d pos, VelConstraint velConstraintOverride)	
+    #####	strafeTo(Vector2d pos)
+  </details>
+
+  ```java
+  PUT FUNCTION HERE
+  ```
+
+  ### strafeToConstantHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### strafeToConstantHeading(Vector2d pos, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	strafeToConstantHeading(Vector2d pos, VelConstraint velConstraintOverride)	
+    #####	strafeToConstantHeading(Vector2d pos)
+  </details>
+
+  ```java
+  PUT FUNCTION HERE
+  ```
+
+  ### strafeToLinearHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### strafeToLinearHeading(Vector2d pos, Rotation2d heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+  	##### strafeToLinearHeading(Vector2d pos, Rotation2d heading, VelConstraint velConstraintOverride)	
+    #####	strafeToLinearHeading(Vector2d pos, Rotation2d heading)	
+    #####	strafeToLinearHeading(Vector2d pos, Double heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	strafeToLinearHeading(Vector2d pos, Double heading, VelConstraint velConstraintOverride)	
+    #####	strafeToLinearHeading(Vector2d pos, Double heading)
+  </details>
+
+  ```java
+  PUT FUNCTION HERE
+  ```
+
+  ### strafeToSplineHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### strafeToSplineHeading(Vector2d pos, Rotation2d heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	strafeToSplineHeading(Vector2d pos, Rotation2d heading, VelConstraint velConstraintOverride)	
+    #####	strafeToSplineHeading(Vector2d pos, Rotation2d heading)	
+    #####	strafeToSplineHeading(Vector2d pos, Double heading, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	strafeToSplineHeading(Vector2d pos, Double heading, VelConstraint velConstraintOverride)	
+    #####	strafeToSplineHeading(Vector2d pos, Double heading)
+  </details>
+
+  ```java
+  PUT FUNCTION HERE
+  ```
+</details>
+
+## splineTo commands
+<details>
+  <summary><strong>PUT FUNCTIONS HERE</strong></summary>
+
+  ### splineTo()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### splineTo(Vector2d pos, Rotation2d tangent, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	splineTo(Vector2d pos, Rotation2d tangent, VelConstraint velConstraintOverride)	
+    #####	splineTo(Vector2d pos, Rotation2d tangent)	
+    #####	splineTo(Vector2d pos, Double tangent, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	splineTo(Vector2d pos, Double tangent, VelConstraint velConstraintOverride)	
+    #####	splineTo(Vector2d pos, Double tangent)
+  </details>
+
+  ```java
+  PUT FUNCTION HERE
+  ```
+
+  ### splineToConstantHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### splineToConstantHeading(Vector2d pos, Rotation2d tangent, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	splineToConstantHeading(Vector2d pos, Rotation2d tangent, VelConstraint velConstraintOverride)	
+    #####	splineToConstantHeading(Vector2d pos, Rotation2d tangent)	
+    #####	splineToConstantHeading(Vector2d pos, Double tangent, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	splineToConstantHeading(Vector2d pos, Double tangent, VelConstraint velConstraintOverride)	
+    #####	splineToConstantHeading(Vector2d pos, Double tangent)
+  </details>
+
+  ```java
+  PUT FUNCTION HERE
+  ```
+
+  ### splineToLinearHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### splineToLinearHeading(Pose2d pose, Rotation2d tangent, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	splineToLinearHeading(Pose2d pose, Rotation2d tangent, VelConstraint velConstraintOverride)	
+    #####	splineToLinearHeading(Pose2d pose, Rotation2d tangent)	
+    #####	splineToLinearHeading(Pose2d pose, Double tangent, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	splineToLinearHeading(Pose2d pose, Double tangent, VelConstraint velConstraintOverride)	
+    #####	splineToLinearHeading(Pose2d pose, Double tangent)
+  </details>
+
+  ```java
+  PUT FUNCTION HERE
+  ```
+
+  ### splineToSplineHeading()
+  <details>
+    <summary><strong>Parameters</strong></summary>
+    ##### splineToSplineHeading(Pose2d pose, Rotation2d tangent, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	splineToSplineHeading(Pose2d pose, Rotation2d tangent, VelConstraint velConstraintOverride)	
+    #####	splineToSplineHeading(Pose2d pose, Rotation2d tangent)	
+    #####	splineToSplineHeading(Pose2d pose, Double tangent, VelConstraint velConstraintOverride, AccelConstraint accelConstraintOverride)	
+    #####	splineToSplineHeading(Pose2d pose, Double tangent, VelConstraint velConstraintOverride)	
+    #####	splineToSplineHeading(Pose2d pose, Double tangent)
+  </details>
+
+  ```java
+  PUT FUNCTION HERE
+  ```
+</details>
+
+## build()
+```java
+PUT FUNCTION HERE
+```
