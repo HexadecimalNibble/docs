@@ -3,11 +3,15 @@ sidebar_position: 1
 ---
 
 # What is Roadrunner?
-
 Roadrunner is an FTC library for planning robot paths.
 
 These docs only cover version 1.0+ of the Roadrunner Library. If you are using an older version (0.5) of Roadrunner, please see [learnroadrunner.com](https://learnroadrunner.com/).
 
+# Why make this?
+There are other sites (shown below) detailing some functionality of Roadrunner, however, these sites lack a lot of detail, leaving a lot up to the end user to figure out. The goal of this website is to provide a more comprehensive guide to RR 1.0+.
+
+[https://rr.brott.dev/docs/v1-0/installation/](https://rr.brott.dev/docs/v1-0/installation/)
+[https://cookbook.dairy.foundation/roadrunner_10/complete_trajectorybuilder_reference.html](https://cookbook.dairy.foundation/roadrunner_10/complete_trajectorybuilder_reference.html)
 
 ## Coordinate Frame
 Roadrunner operates on an alliance-centric coordinate frame with coordinate (0, 0) being the center of the field and coordinate (-72, -72) being the bottom left corner from the point of view of the alliance.
