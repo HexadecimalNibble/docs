@@ -84,7 +84,7 @@ Action awesomeAction = new InstantAction(
 ```
 
 ### NullAction
-Does nothing. This action is probably not useful for anything and is only included for completeness sake.
+Does nothing. This action can be used when ???. TODO: FINISH THIS
 
 ```java
 Action boringAction = new NullAction()
