@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 6
 ---
 
 # Making Your First Roadrunner Program
@@ -16,12 +16,12 @@ import org.firstinspires.ftc.teamcode.roadrunner.MecanumDrive;
 ```
 
 ## Starting Pose
-Next, you need to specify a starting pose. This is used in the creation of the Mecanum Drive class (next step) to tell Roadrunner where it is starting. This should be modified to your starting position in autonomous. In the following code, the starting position is set to a coordinate of *(-16, -55)* facing forward (a heading of *90°*).
+Next, you need to specify a starting pose. This is used in the creation of the Mecanum Drive class (next step) to tell Roadrunner where it is starting. This should be modified to your starting position in autonomous. In the following code, the starting position is set to a coordinate of *(0.0, -54.0)* facing forward (a heading of *90.0°*).
 :::tip Notice
 Be careful to make sure your starting heading is specified in radians. You can do this with either a `Math.toRadians()` function call or by specifying the heading in radians manually like `Math.PI`.
 :::
 ```java
-Pose2d beginPose = new Pose2d(-16, -55, Math.toRadians(90));
+Pose2d beginPose = new Pose2d(0.0, -54.0, Math.toRadians(90.0));
 ```
 
 ## Mecanum Drive
@@ -38,12 +38,16 @@ Action trajAction;
 ```
 
 ## Trajectory Creation
-We then create the trajectory itself. This consists of strafing to the coordinate *(30, 10)* and then moving in a spline to the coordinate *(-30, -10)*.
+We then create the trajectory itself. This consists of the following actions.
+Strafing to the coordinate *(72.0, -54.0)*.
+Setting the start tangent for the next movement to 90.0°.
+Moving in a spline to the coordinate *(0.0, 0.0)* with an end tangent of 90.0°.
 ```java
 traj = drive.actionBuilder(drive.pose)
-  // Put your functions here
-  .strafeTo(new Vector2d(30, 10))
-  .splineTo(new Vector2d(-30, -10));
+  // Put your movements here
+  .strafeTo(Vector2d(72.0, -54.0))
+  .setTangent(90.0)
+  .splineToConstantHeading(Vector2d(0.0, 0.0), Math.toRadians(90.0))
 ```
 
 ## Trajectory Action
@@ -68,7 +72,7 @@ public class MyOpmode extends LinearOpMode {
   @Override
   public void runOpMode() {
     // Specify a starting pose
-    Pose2d beginPose = new Pose2d(-16, -55, Math.toRadians(90));
+    Pose2d beginPose = new Pose2d(0.0, -54.0, Math.toRadians(90.0));
 
     // Create an instance of the Mecanum Drive class
     MecanumDrive drive = new MecanumDrive(hardwareMap, beginPose);
@@ -80,8 +84,9 @@ public class MyOpmode extends LinearOpMode {
     // Create a Trajectory
     traj = drive.actionBuilder(drive.pose)
       // Put your functions here
-      .strafeTo(new Vector2d(30, 10))
-      .splineTo(new Vector2d(-30, -10));
+      .strafeTo(Vector2d(72.0, -54.0))
+      .setTangent(90.0)
+      .splineToConstantHeading(Vector2d(0.0, 0.0), Math.toRadians(90.0))
 
     // Create an action that follows the created trajectory
     trajAction = traj.build()
