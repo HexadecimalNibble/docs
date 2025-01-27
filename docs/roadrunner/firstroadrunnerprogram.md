@@ -98,6 +98,6 @@ public class MyOpmode extends LinearOpMode {
 ```
 
 ## Demonstration
-This video shows a demonstration of how this program would move the robot.
+This video shows a demonstration of this program.
 
-TODO: ADD VIDEO
+<video controls src="https://rr-playground-server.brott.dev/93a98005-6294-497c-91e4-b53ca68c367c.mp4" title="Title" height="400px"></video>
