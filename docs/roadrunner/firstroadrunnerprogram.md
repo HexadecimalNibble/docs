@@ -6,7 +6,7 @@ sidebar_position: 4
 This page will walk you through the creation of a simple Roadrunner program. If you have not yet downloaded Roadrunner, see [here](/roadrunner/about#installation).
 
 ## Imports
-The first lines of code needed in every Roadrunner program are the import statements. These will vary based on what you are programming and generally [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) like Android Studio will automatically add them. But, for demonstration purposes, we will just import these.
+The first lines of code needed in every Roadrunner program are the import statements. These will vary based on what you are programming and generally [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) like Android Studio will automatically add them. But, for demonstration purposes, we will import these.
 ```java
 import com.acmerobotics.roadrunner.Pose2d;
 import com.acmerobotics.roadrunner.Vector2d;

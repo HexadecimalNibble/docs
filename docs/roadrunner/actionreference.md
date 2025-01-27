@@ -76,7 +76,7 @@ CODE HERE
 Action that instantly runs. This is useful for servo movements because we don't know when the servo gets to its target position (this could be used in a SequentialAction with a delay).
 
 ```java
-// Action immedietly returns
+// Action immediately returns
 Action awesomeAction = new InstantAction(
   coolAction,
   reallyCoolAction
