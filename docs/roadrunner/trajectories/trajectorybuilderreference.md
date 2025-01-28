@@ -34,7 +34,8 @@ The video demonstrations of the commands shown below are shown from the point of
 </details>
 
 ```java
-// sets the tangent to 90° (Pi radians)
+// Sets the tangent to 90° (Pi radians)
+// This is used to specify the start tangent of the next movement command
 .setTangent(Math.PI)
 ```
 
@@ -45,7 +46,7 @@ The video demonstrations of the commands shown below are shown from the point of
 </details>
 
 ```java
-// run trajectory with robot facing opposite direction (backwards)
+// Run trajectory with robot facing opposite direction (backwards)
 .setReversed(true)
 ```
 
