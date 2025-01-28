@@ -237,7 +237,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  PUT FUNCTION HERE
+  // Strafe to (24, 24), changing the heading according to a spline
+  .strafeToSplineHeading(new Vector2d(24, 24), Math.toRadians(0.0))
   ```
 </details>
 
