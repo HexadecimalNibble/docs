@@ -73,7 +73,7 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // drive to an x-value of 25
+  // Drive to an x-value of 25
   .lineToX(25)
   ```
   <video controls src="https://rr-playground-server.brott.dev/3ee477b3-aa4b-4be3-a43b-778964ad8023.mp4" title="Title" height="400px"></video>
@@ -87,7 +87,7 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // drive to an x-value of 25
+  // Drive to an x-value of 25, keeping the heading constant
   .lineToXConstantHeading(25)
   ```
 
@@ -103,7 +103,7 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // drive to an x-value of 25
+  // Drive to an x-value of 25, changing the heading linearly
   .lineToXLinearHeading(25)
   ```
 
@@ -119,7 +119,7 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // drive to an y-value of 25
+  // Drive to an y-value of 25, changing the heading according to a spline
   .lineToXSplineHeading(25)
   ```
 
@@ -132,7 +132,7 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // drive to an y-value of 25
+  // Drive to an y-value of 25
   .lineToY(25)
   ```
 
@@ -145,7 +145,7 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // drive to an y-value of 25
+  // Drive to an y-value of 25, keeping the heading constant
   .lineToYConstantHeading(25)
   ```
 
@@ -161,7 +161,7 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // drive to an y-value of 25
+  // Drive to an y-value of 25, linearly changing the heading
   .lineToYLinearHeading(25)
   ```
 
@@ -177,7 +177,7 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // drive to an y-value of 25
+  // Drive to an y-value of 25, changing the heading according to a spline
   .lineToYSplineHeading(25)
   ```
 </details>
