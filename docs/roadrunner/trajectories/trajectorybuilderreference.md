@@ -312,6 +312,7 @@ The video demonstrations of the commands shown below are shown from the point of
 </details>
 
 ## build()
+Used to assemble a trajectory into an action.
 ```java
 PUT FUNCTION HERE
 ```
