@@ -8,6 +8,7 @@ This page lists common Roadrunner TrajectoryBuilder functions along with a descr
 
 :::warning Notice
 This page only covers functions for the TrajectoryBuilder. TrajectoryActionBuilder includes these functions along with other ones for turning and other actions.
+TODO: SHOULD WE MAKE A PAGE FOR THIS?
 :::
 
 ```java
@@ -28,7 +29,7 @@ trajAction = traj.build()
 Actions.runBlocking(trajAction);
 ```
 :::warning Be careful
-The video demonstrations of the commands shown below are shown from the point of view of the audience which means the x-value will go up.
+The video demonstrations of the commands shown below are shown from the point of view of the audience which means the x-axis is vertical.
 :::
 
 ## setTangent()
