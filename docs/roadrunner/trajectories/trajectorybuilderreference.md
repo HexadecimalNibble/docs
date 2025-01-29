@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # TrajectoryBuilder Reference
 
-This page lists common Roadrunner TrajectoryBuilder functions along with a description and demonstration of them. All of the functions listed below should be put inside a trajectoryBuilder which could then be created into an action and run.
+This page lists common Roadrunner TrajectoryBuilder functions along with a description and demonstration of them. All of the functions listed below should be put inside a trajectoryBuilder which could then be created into an action and run. The following code shows a demonstration of how the following trajectories could be run.
 ```java
-Pose2d beginPose = new Pose2d(-16, -55, Math.toRadians(90));
+Pose2d beginPose = new Pose2d(-16.0, -55.0, Math.toRadians(90.0));
 MecanumDrive drive = new MecanumDrive(hardwareMap, beginPose);
 
 TrajectoryActionBuilder traj;
@@ -14,8 +14,8 @@ Action trajAction;
 
 traj = drive.actionBuilder(drive.pose)
   // Put your functions here
-  .strafeTo(new Vector2d(30, 10))
-  .strafeTo(new Vector2d(-30, -10));
+  .strafeTo(new Vector2d(30.0, 10.0))
+  .strafeTo(new Vector2d(-30.0, -10.0));
 
 trajAction = traj.build()
 
@@ -53,8 +53,8 @@ The video demonstrations of the commands shown below are shown from the point of
 <br></br>
 <br></br>
 
-:::warning Be careful
-`lineToX()` and `lineToY()` do not allow strafing. Therefore, these functions should be avoided in favor of `strafeTo()`.
+:::warning Be Careful of Starting Heading
+`lineToX()` and `lineToY()` do not allow strafing. Therefore, these functions should be avoided in favor of `strafeTo()`. See the [Common Issues](../commonissues.md) page for more details.
 :::
 
 :::tip Notice
@@ -73,8 +73,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // Drive to an x-value of 25
-  .lineToX(25)
+  // Drive to an x-value of 25.0
+  .lineToX(25.0)
   ```
   <video controls src="https://rr-playground-server.brott.dev/3ee477b3-aa4b-4be3-a43b-778964ad8023.mp4" title="Title" height="400px"></video>
 
@@ -87,8 +87,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // Drive to an x-value of 25, keeping the heading constant
-  .lineToXConstantHeading(25)
+  // Drive to an x-value of 25.0, keeping the heading constant
+  .lineToXConstantHeading(25.0)
   ```
 
   ### lineToXLinearHeading()
@@ -103,8 +103,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // Drive to an x-value of 25, changing the heading linearly
-  .lineToXLinearHeading(25)
+  // Drive to an x-value of 25.0, changing the heading linearly
+  .lineToXLinearHeading(25.0, Math.toRadians(90.0))
   ```
 
   ### lineToXSplineHeading()
@@ -119,8 +119,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // Drive to an y-value of 25, changing the heading according to a spline
-  .lineToXSplineHeading(25)
+  // Drive to an y-value of 25.0, changing the heading according to a spline
+  .lineToXSplineHeading(25.0, Math.toRadians(90.0))
   ```
 
   ### lineToY()
@@ -132,8 +132,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // Drive to an y-value of 25
-  .lineToY(25)
+  // Drive to an y-value of 25.0
+  .lineToY(25.0)
   ```
 
   ### lineToYConstantHeading()
@@ -145,8 +145,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // Drive to an y-value of 25, keeping the heading constant
-  .lineToYConstantHeading(25)
+  // Drive to an y-value of 25.0, keeping the heading constant
+  .lineToYConstantHeading(25.0)
   ```
 
   ### lineToYLinearHeading()
@@ -161,8 +161,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // Drive to an y-value of 25, linearly changing the heading
-  .lineToYLinearHeading(25)
+  // Drive to an y-value of 25.0, linearly changing the heading
+  .lineToYLinearHeading(25.0, Math.toRadians(90.0))
   ```
 
   ### lineToYSplineHeading()
@@ -177,14 +177,14 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  // Drive to an y-value of 25, changing the heading according to a spline
-  .lineToYSplineHeading(25)
+  // Drive to an y-value of 25.0, changing the heading according to a spline
+  .lineToYSplineHeading(25.0, Math.toRadians(90.0))
   ```
 </details>
 
 ## strafeTo commands
 <details>
-  <summary><strong>PUT FUNCTIONS HERE</strong></summary>
+  <summary><strong>strafeTo(), strafeToConstantHeading(), strafeToLinearHeading(), strafeToSplineHeading()</strong></summary>
 
   ### strafeTo()
   <details>
@@ -195,7 +195,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  PUT FUNCTION HERE
+  // Strafe to (24, 24), keeping the heading the same
+  .strafeToConstantHeading(new Vector2d(24,24))
   ```
 
   ### strafeToConstantHeading()
@@ -205,9 +206,11 @@ The video demonstrations of the commands shown below are shown from the point of
     #####	strafeToConstantHeading(Vector2d pos, VelConstraint velConstraintOverride)	
     #####	strafeToConstantHeading(Vector2d pos)
   </details>
+  idk what is difference between strafeToConstantHeading() and strafeTo()?
 
   ```java
-  PUT FUNCTION HERE
+  // Strafe to (24, 24), keeping the heading constant
+  .strafeToConstantHeading(new Vector2d(24,24))
   ```
 
   ### strafeToLinearHeading()
@@ -222,7 +225,8 @@ The video demonstrations of the commands shown below are shown from the point of
   </details>
 
   ```java
-  PUT FUNCTION HERE
+  // Strafe to (24, 24), changing the heading linearly
+  .strafeToLinearHeading(new Vector2d(24, 24), Math.toRadians(0.0))
   ```
 
   ### strafeToSplineHeading()
@@ -244,7 +248,7 @@ The video demonstrations of the commands shown below are shown from the point of
 
 ## splineTo commands
 <details>
-  <summary><strong>PUT FUNCTIONS HERE</strong></summary>
+  <summary><strong>splineTo(), splineToConstantHeading(), splineToLinearHeading(), splineToSplineHeading()</strong></summary>
 
   ### splineTo()
   <details>
