@@ -5,6 +5,11 @@ sidebar_position: 3
 # TrajectoryBuilder Reference
 
 This page lists common Roadrunner TrajectoryBuilder functions along with a description and demonstration of them. All of the functions listed below should be put inside a trajectoryBuilder which could then be created into an action and run. The following code shows a demonstration of how the following trajectories could be run.
+
+:::warning Notice
+This page only covers functions for the TrajectoryBuilder. TrajectoryActionBuilder includes these functions along with other ones for turning and other actions.
+:::
+
 ```java
 Pose2d beginPose = new Pose2d(-16.0, -55.0, Math.toRadians(90.0));
 MecanumDrive drive = new MecanumDrive(hardwareMap, beginPose);
@@ -44,6 +49,7 @@ The video demonstrations of the commands shown below are shown from the point of
   <summary><strong>Parameters</strong></summary>
   ##### setReversed(Boolean reversed)
 </details>
+This internally calls `setTangent(180.0)`.
 
 ```java
 // Run trajectory with robot facing opposite direction (backwards)

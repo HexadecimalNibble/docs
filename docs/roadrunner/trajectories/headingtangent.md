@@ -2,8 +2,8 @@
 sidebar_position: 1
 ---
 
-# Trajectory Builder Heading
-This page describes properly using heading when creating trajectories.
+# Trajectory Builder Heading and Tangent
+This page describes how to properly using headings and tangents when creating trajectories.
 
 ## Trajectory Builder Heading Functions
 
@@ -34,7 +34,7 @@ PROB REMOVE BC DOESN'T MAKE SENSE
 The start and end trajectory actually change the start and end [tangent](https://en.wikipedia.org/wiki/Tangent) lines of the spline.
 :::
 ### Linear Heading
-Heading changes linearly throughout a trajectory from a start heading to an end heading. The start heading can be specified with a `setTangent()` function before the trajectory movement otherwise it is the heading from the end of the previous trajectory (see below) CHECK THIS. The end heading is specified in the trajectory function.
+The heading linearly throughout a trajectory from a start heading to an end heading. The start heading can be specified with a `setTangent()` function before the trajectory movement otherwise it is the heading from the end of the previous trajectory (see below) CHECK THIS. The end heading is specified in the trajectory function.
 
 #### Examples
 ```java
@@ -45,7 +45,7 @@ splineToLinearHeading()
 ```
 
 ### Spline Heading
-Heading changes in accordance with a spline throughout a trajectory. The start tangent can be specified with a `setTangent()` function before the trajectory movement otherwise it is the heading from the end of the previous trajectory (see below) CHECK THIS. The end heading is specified in the trajectory function.
+The heading changes in accordance with the spline throughout a trajectory. The start tangent can be specified with a `setTangent()` function before the trajectory movement otherwise it is the heading from the end of the previous trajectory (see below) CHECK THIS. The end heading is specified in the trajectory function.
 
 #### Examples
 ```java
@@ -55,7 +55,8 @@ strafeToSplineHeading()
 splineToSplineHeading()
 ```
 
-## Start and End Tangents
+## Trajectory Builder Tangents
+### Start and End Tangents
 These are used to specify the starting and ending tangent of a trajectory.
 
 The starting tangent can be specified with `setTangent()` and the end tangent is specified in the trajectory function as a parameter. A demonstration of this behavior is shown below.
@@ -88,8 +89,9 @@ The starting tangent can be specified with `setTangent()` and the end tangent is
   // Run the action
   Actions.runBlocking(trajAction);
   ```
+  <video controls src="" title="Title" height="400px"></video>
   ### Explanation
-  This function moves to the coordinates (-50, 50) with an end heading of `Math.toRadians(0.0)` and an end tangent of `Math.toRadians(-90.0)`. When a begin tangent/heading is not specified, the current heading is used. In this case that is the heading stored in `beginPose` which is `Math.toRadians(45.0)`.
+  This function moves to the coordinates (-50, 50) with an end heading of `Math.toRadians(0.0)` and an end tangent of `Math.toRadians(-90.0)`. When a begin tangent, the current heading is used. In this case that is the heading stored in `beginPose` which is `Math.toRadians(45.0)`.
   ```java
   .splineToSplineHeading(new Pose2d(-50.0, 50.0, Math.toRadians(0.0)), Math.toRadians(-90.0))
   ```
