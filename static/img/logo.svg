@@ -1,10 +1,10 @@
 <svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_173_243" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="36" y="20" width="428" height="460">
-<path d="M399.205 113.05L294 52.3094C266.773 36.5897 233.227 36.5897 206 52.3094L100.795 113.05C73.5676 128.769 56.7949 157.82 56.7949 189.26V310.74C56.7949 342.18 73.5676 371.231 100.795 386.95L206 447.691C233.227 463.41 266.773 463.41 294 447.691L399.205 386.95C426.432 371.231 443.205 342.18 443.205 310.74V189.26C443.205 157.82 426.432 128.769 399.205 113.05Z" stroke="white" stroke-width="40"/>
+<mask id="mask0_142_142" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="36" y="20" width="428" height="460">
+<path d="M294 52.3094C266.773 36.5897 233.227 36.5897 206 52.3094L100.795 113.05C73.5676 128.769 56.7949 157.82 56.7949 189.26V310.74C56.7949 342.18 73.5676 371.231 100.795 386.95L206 447.691C233.227 463.41 266.773 463.41 294 447.691L399.205 386.95C426.432 371.231 443.205 342.18 443.205 310.74V189.26C443.205 157.82 426.432 128.769 399.205 113.05L294 52.3094Z" stroke="white" stroke-width="40"/>
 <circle cx="325" cy="250" r="45" stroke="white" stroke-width="40"/>
 <circle cx="175" cy="250" r="45" stroke="white" stroke-width="40"/>
 </mask>
-<g mask="url(#mask0_173_243)">
-<rect width="500" height="500" fill="#B3FFDF"/>
+<g mask="url(#mask0_142_142)">
+<rect width="500" height="500" fill="white"/>
 </g>
 </svg>
