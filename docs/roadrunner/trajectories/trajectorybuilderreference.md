@@ -319,7 +319,23 @@ This internally calls `setTangent(180.0)`.
 </details>
 
 ## build()
-Used to assemble a trajectory into an action.
+Used to assemble a trajectory into an action. This action can then be executed to run the trajectory.
 ```java
-PUT FUNCTION HERE
+// Specify a starting pose
+Pose2d beginPose = new Pose2d(-16.0, -55.0, Math.toRadians(90.0));
+
+// Create an instance of the Mecanum Drive class
+MecanumDrive drive = new MecanumDrive(hardwareMap, beginPose);
+
+// Create a Trajectory
+TrajectoryActionBuilder traj = drive.actionBuilder(drive.pose)
+  // Put your functions here
+  .strafeTo(new Vector2d(30.0, 10.0))
+  .splineTo(new Vector2d(-30.0, -10.0));
+
+// Create an action that follows the created trajectory
+Action trajAction = traj.build()
+
+// Run the action
+Actions.runBlocking(trajAction);
 ```
