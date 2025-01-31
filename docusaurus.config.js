@@ -65,8 +65,8 @@ const config = {
         title: 'Hexnibble Docs',
         logo: {
           alt: 'Hexadecimal Nibble Logo',
-          src: 'img/logo.svg',
-          srcDark: 'img/logo_dark.svg',
+          src: 'img/logo_dark.svg',
+          srcDark: 'img/logo.svg',
         },
         items: [
           {
