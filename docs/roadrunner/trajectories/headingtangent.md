@@ -89,7 +89,7 @@ The video demonstrations are shown from the point of view of the audience which 
   // Run the action
   Actions.runBlocking(trajAction);
   ```
-  <video controls src="https://rr-playground-server.brott.dev/a108ce58-7a40-4653-b257-3e51491edcf7.mp4" title="Title" height="400px"></video>
+  <video controls src="https://rr-playground-server.brott.dev/f05701f3-2d3e-4e69-8311-4eaa8926320d.mp4" title="Title" height="400px"></video>
   ### Explanation
   This function moves to the coordinates (-50, 50) with an end heading of `Math.toRadians(0.0)` and an end tangent of `Math.toRadians(-90.0)`. When a begin tangent, the current heading is used. In this case that is the heading stored in `beginPose` which is `Math.toRadians(45.0)`.
   ```java
