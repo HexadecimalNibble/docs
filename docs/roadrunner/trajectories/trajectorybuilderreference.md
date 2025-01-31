@@ -40,9 +40,9 @@ The video demonstrations of the commands shown below are shown from the point of
 </details>
 
 ```java
-// Sets the tangent to 90° (Pi radians)
+// Sets the tangent to 90°
 // This is used to specify the start tangent of the next movement command
-.setTangent(Math.PI)
+.setTangent(Math.toRadians(90.0))
 ```
 
 ## setReversed()
