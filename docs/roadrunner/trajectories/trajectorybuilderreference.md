@@ -50,7 +50,7 @@ The video demonstrations of the commands shown below are shown from the point of
   <summary><strong>Parameters</strong></summary>
   ##### setReversed(Boolean reversed)
 </details>
-This internally calls `setTangent(180.0)`.
+This internally calls `setTangent(Math.toRadians(180.0))`.
 
 ```java
 // Run trajectory with robot facing opposite direction (backwards)

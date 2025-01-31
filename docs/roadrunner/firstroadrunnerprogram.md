@@ -46,7 +46,7 @@ Moving in a spline to the coordinate *(0.0, 0.0)* with an end tangent of 90.0°.
 traj = drive.actionBuilder(drive.pose)
   // Put your movements here
   .strafeTo(Vector2d(72.0, -54.0))
-  .setTangent(90.0)
+  .setTangent(Math.toRadians(90.0))
   .splineToConstantHeading(Vector2d(0.0, 0.0), Math.toRadians(90.0))
 ```
 
@@ -85,7 +85,7 @@ public class MyOpmode extends LinearOpMode {
     traj = drive.actionBuilder(drive.pose)
       // Put your functions here
       .strafeTo(Vector2d(72.0, -54.0))
-      .setTangent(90.0)
+      .setTangent(Math.toRadians(90.0))
       .splineToConstantHeading(Vector2d(0.0, 0.0), Math.toRadians(90.0))
 
     // Create an action that follows the created trajectory
