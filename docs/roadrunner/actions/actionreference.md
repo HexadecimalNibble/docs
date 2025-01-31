@@ -84,7 +84,7 @@ Action awesomeAction = new InstantAction(
 ```
 
 ### NullAction
-Does nothing. This action can be used when ???. TODO: FINISH THIS
+Does nothing. This action can be used when a function needs to return an action that doesn't do anything (maybe if the next action depended on whether a certain game object was detected?).
 
 ```java
 Action boringAction = new NullAction()
