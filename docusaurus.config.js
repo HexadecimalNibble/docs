@@ -66,7 +66,7 @@ const config = {
         logo: {
           alt: 'Hexadecimal Nibble Logo',
           src: 'img/logo_dark.svg',
-          srcDark: 'img/logo.svg',
+          srcDark: 'img/logo_green.svg',
         },
         items: [
           {
