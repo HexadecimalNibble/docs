@@ -5,7 +5,8 @@ sidebar_position: 8
 # Common Issues
 This page will offer solutions to some common issues and errors experienced with Roadrunner 1.0.
 
-## Path tangent orthogonal to the x-axis, try using lineToY() instead<br>Path tangent orthogonal to the y-axis, try using lineToX() instead
+## Path tangent orthogonal to the x-axis, try using lineToY() instead
+## Path tangent orthogonal to the y-axis, try using lineToX() instead
 ### The Issue
 These errors both occur when using a lineTo function when the robot is not facing straight (it is trying to strafe).
 
