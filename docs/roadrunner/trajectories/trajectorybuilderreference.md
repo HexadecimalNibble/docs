@@ -61,7 +61,7 @@ This internally calls `setTangent(180.0)`.
 <br></br>
 
 :::warning Be Careful of Starting Heading
-`lineToX()` and `lineToY()` do not allow strafing. Therefore, these functions should be avoided in favor of `strafeTo()`. See the [Common Issues](../commonissues.md) page for more details.
+`lineToX()` and `lineToY()` do not allow strafing. Therefore, these functions should be avoided in favor of `strafeTo()`. See [this](../commonissues.md#path-tangent-orthogonal-to-the-x-axis-try-using-linetoy-instead) section on the Common Issues page for more details.
 :::
 
 :::tip Notice
