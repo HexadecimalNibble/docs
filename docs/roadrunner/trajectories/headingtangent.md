@@ -8,7 +8,7 @@ This page describes how to properly using headings and tangents when creating tr
 ## Trajectory Builder Heading Functions
 
 ### No heading
-These trajectories keep the heading the same throughout the trajectory.
+These trajectories keep the heading the same throughout the trajectory. This doesn't seem to be true for splines??? Todo: fix this
 
 #### Examples
 ```java

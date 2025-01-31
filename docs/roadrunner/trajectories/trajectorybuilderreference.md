@@ -202,8 +202,8 @@ This internally calls `setTangent(180.0)`.
   </details>
 
   ```java
-  // Strafe to (24, 24), keeping the heading the same
-  .strafeToConstantHeading(new Vector2d(24,24))
+  // Strafe to (24.0, 24.0), keeping the heading the same
+  .strafeToConstantHeading(new Vector2d(24.0, 24.0))
   ```
 
   ### strafeToConstantHeading()
@@ -216,8 +216,8 @@ This internally calls `setTangent(180.0)`.
   idk what is difference between strafeToConstantHeading() and strafeTo()?
 
   ```java
-  // Strafe to (24, 24), keeping the heading constant
-  .strafeToConstantHeading(new Vector2d(24,24))
+  // Strafe to (24.0, 24.0), keeping the heading constant
+  .strafeToConstantHeading(new Vector2d(24.0, 24.0))
   ```
 
   ### strafeToLinearHeading()
@@ -232,8 +232,8 @@ This internally calls `setTangent(180.0)`.
   </details>
 
   ```java
-  // Strafe to (24, 24), changing the heading linearly
-  .strafeToLinearHeading(new Vector2d(24, 24), Math.toRadians(0.0))
+  // Strafe to (24.0, 24.0), changing the heading linearly
+  .strafeToLinearHeading(new Vector2d(24.0, 24.0), Math.toRadians(0.0))
   ```
 
   ### strafeToSplineHeading()
@@ -248,8 +248,8 @@ This internally calls `setTangent(180.0)`.
   </details>
 
   ```java
-  // Strafe to (24, 24), changing the heading according to a spline
-  .strafeToSplineHeading(new Vector2d(24, 24), Math.toRadians(0.0))
+  // Strafe to (24.0, 24.0), changing the heading according to a spline
+  .strafeToSplineHeading(new Vector2d(24.0, 24.0), Math.toRadians(0.0))
   ```
 </details>
 
@@ -269,7 +269,8 @@ This internally calls `setTangent(180.0)`.
   </details>
 
   ```java
-  PUT FUNCTION HERE
+  // Spline to (24, 24) with an ending tangent of 0.0, changing the heading with the spline
+  .splineTo(new Vector2d(24.0, 24.0), Math.toRadians(0.0))
   ```
 
   ### splineToConstantHeading()
@@ -284,7 +285,8 @@ This internally calls `setTangent(180.0)`.
   </details>
 
   ```java
-  PUT FUNCTION HERE
+  // Spline to (24, 24) with an ending tangent of 0.0, keeping the heading constant
+  .splineToConstantHeading(new Vector2d(24.0, 24.0), Math.toRadians(0.0))
   ```
 
   ### splineToLinearHeading()
@@ -299,7 +301,8 @@ This internally calls `setTangent(180.0)`.
   </details>
 
   ```java
-  PUT FUNCTION HERE
+  // Spline to (24, 24) with an ending tangent of 0.0, linearly changing the heading from the previous heading to 90.0 degrees
+  .splineToLinearHeading(new Pose2d(24.0, 24.0, Math.toRadians(90.0)), Math.toRadians(0.0))
   ```
 
   ### splineToSplineHeading()
@@ -314,7 +317,8 @@ This internally calls `setTangent(180.0)`.
   </details>
 
   ```java
-  PUT FUNCTION HERE
+  // Spline to (24, 24) with an ending tangent of 0.0, changing the heading from the previous heading to 90.0 degrees according to a spline
+  .splineToSplineHeading(new Pose2d(24.0, 24.0, Math.toRadians(90.0)), Math.toRadians(0.0))
   ```
 </details>
 
