@@ -14,4 +14,4 @@ TrajectoryActionBuilder traj = drive.actionBuilder(new Pose2d(0, 0, 0))
 ```
 
 ## Action
-Lorem ipsum
+Actions are used to run the trajectory drivegrain movement in combination with other movements (lift, arm, etc.). As a result, understanding actions is essential to making a good Roadrunner autonomous.

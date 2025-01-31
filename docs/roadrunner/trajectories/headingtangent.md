@@ -29,12 +29,8 @@ strafeToConstantHeading()
 splineToConstantHeading()
 ```
 
-:::tip Notice
-PROB REMOVE BC DOESN'T MAKE SENSE
-The start and end trajectory actually change the start and end [tangent](https://en.wikipedia.org/wiki/Tangent) lines of the spline.
-:::
 ### Linear Heading
-The heading linearly throughout a trajectory from a start heading to an end heading. The start heading can be specified with a `setTangent()` function before the trajectory movement otherwise it is the heading from the end of the previous trajectory (see below) CHECK THIS. The end heading is specified in the trajectory function.
+The heading linearly throughout a trajectory from a start heading to an end heading. The start heading is simply the current heading (end heading of previous trajectory movement). The end heading is specified in the trajectory function.
 
 #### Examples
 ```java
@@ -45,7 +41,7 @@ splineToLinearHeading()
 ```
 
 ### Spline Heading
-The heading changes in accordance with the spline throughout a trajectory. The start tangent can be specified with a `setTangent()` function before the trajectory movement otherwise it is the heading from the end of the previous trajectory (see below) CHECK THIS. The end heading is specified in the trajectory function.
+The heading changes in accordance with the spline throughout a trajectory. The start heading is simply the current heading (end heading of previous trajectory movement). The end heading is specified in the trajectory function.
 
 #### Examples
 ```java
@@ -64,7 +60,7 @@ The starting tangent can be specified with `setTangent()` and the end tangent is
 
 ### Examples
 
-:::warning Be careful
+:::warning
 The video demonstrations are shown from the point of view of the audience which means the x-axis is vertical.
 :::
 
