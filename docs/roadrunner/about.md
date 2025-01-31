@@ -10,7 +10,7 @@ These docs only cover version 1.0+ of the Roadrunner Library. If you are using a
 # Why make this?
 There are other sites (shown below) detailing some functionality of Roadrunner, however, these sites lack a lot of detail, leaving a lot up to the end user to figure out. The goal of this website is to provide a more comprehensive guide to RR 1.0+.
 
-[https://rr.brott.dev/docs/v1-0/installation/](https://rr.brott.dev/docs/v1-0/installation/)
+[https://rr.brott.dev/docs](https://rr.brott.dev/docs/)
 [https://cookbook.dairy.foundation/roadrunner_10/complete_trajectorybuilder_reference.html](https://cookbook.dairy.foundation/roadrunner_10/complete_trajectorybuilder_reference.html)
 
 ## Coordinate Frame
