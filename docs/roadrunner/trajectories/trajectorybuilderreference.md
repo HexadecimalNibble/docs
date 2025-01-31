@@ -8,7 +8,7 @@ This page lists common Roadrunner TrajectoryBuilder functions along with a descr
 
 :::warning Notice
 This page only covers functions for the TrajectoryBuilder. TrajectoryActionBuilder includes these functions along with other ones for turning and other actions.
-TODO: SHOULD WE MAKE A PAGE FOR THIS?
+TODO: Should we make a separate page for this? Also build() technically not TrajectoryBuilder function.
 :::
 
 ```java
