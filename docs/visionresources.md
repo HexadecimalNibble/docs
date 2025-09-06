@@ -23,4 +23,3 @@ This site contains some vision resources for FTC teams.
 - [Logitech C270](https://www.logitech.com/en-us/shop/p/c270-hd-webcam)
 - [Logitech C310](https://www.logitech.com/en-us/shop/p/c310-hd-webcam)
 - [Logitech C920](https://www.logitech.com/en-us/shop/p/c920s-pro-hd-webcam.960-001257)
-TODO: PUT LOGITECH CAMERAS
