@@ -16,6 +16,7 @@ This site contains some vision resources for FTC teams.
 ### HuskyLens Documentation
 - [FTC HuskyLens Docs](https://ftc-docs.firstinspires.org/en/latest/devices/huskylens/huskylens.html)
 
-## Vendors
+## Vision Devices
 - [Limelight 3A](https://limelightvision.io/products/limelight-3a)
 - [HuskyLens](https://www.dfrobot.com/product-1922.html)
+- TODO: PUT LOGITECH CAMERAS
