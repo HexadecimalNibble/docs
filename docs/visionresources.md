@@ -11,7 +11,7 @@ This site contains some vision resources for FTC teams.
 - [OpenCV JavaDoc](https://docs.opencv.org/4.x/javadoc/index.html)
 
 ### Limelight Documentation
-- Limelight Documentation: [https://docs.limelightvision.io/docs/docs-limelight/getting-started/summary](https://docs.limelightvision.io/docs/docs-limelight/getting-started/summary)
+- [Official Limelight Documentation](https://docs.limelightvision.io/docs/docs-limelight/getting-started/summary)
 
 ### HuskyLens Documentation
 - [FTC HuskyLens Docs](https://ftc-docs.firstinspires.org/en/latest/devices/huskylens/huskylens.html)
