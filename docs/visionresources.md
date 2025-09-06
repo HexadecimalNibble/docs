@@ -19,4 +19,8 @@ This site contains some vision resources for FTC teams.
 ## Vision Devices
 - [Limelight 3A](https://limelightvision.io/products/limelight-3a)
 - [HuskyLens](https://www.dfrobot.com/product-1922.html)
-- TODO: PUT LOGITECH CAMERAS
+- [GoBilda Headlight](https://www.gobilda.com/led-headlight-for-ftc-275-lumens-dimmable-pwm-controlled/)
+- [Logitech C270](https://www.logitech.com/en-us/shop/p/c270-hd-webcam)
+- [Logitech C310](https://www.logitech.com/en-us/shop/p/c310-hd-webcam)
+- [Logitech C920](https://www.logitech.com/en-us/shop/p/c920s-pro-hd-webcam.960-001257)
+TODO: PUT LOGITECH CAMERAS
